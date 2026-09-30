@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Build Bazaar - Construction Materials</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">BUILD <span>BAZAAR</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav-buttons">
+            <button onclick="login()">Login</button>
+            <button onclick="showCart()">🛒 Cart <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>Build Your Future<br>
+                With <span>Build Bazaar</span>
+            </h1>
+
+            <p>
+                Quality construction materials at affordable prices.
+                Steel, cement, bricks, pipes and more.
+            </p>
+
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search construction materials..."
+                    onkeyup="searchProducts()"
+                >
+
+                <button onclick="searchProducts()">🔍 Search</button>
+            </div>
+
+            <button class="shop-btn" onclick="scrollToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section id="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="categories">
+
+            <div class="category" onclick="filterCategory('Steel')">
+                <div class="category-icon">🏗️</div>
+                <h3>Steel</h3>
+                <p>TMT Bars & Rods</p>
+            </div>
+
+            <div class="category" onclick="filterCategory('Cement')">
+                <div class="category-icon">🧱</div>
+                <h3>Cement</h3>
+                <p>All Brands</p>
+            </div>
+
+            <div class="category" onclick="filterCategory('Bricks')">
+                <div class="category-icon">🧱</div>
+                <h3>Bricks</h3>
+                <p>Blocks & Bricks</p>
+            </div>
+
+            <div class="category" onclick="filterCategory('Pipes')">
+                <div class="category-icon">🚰</div>
+                <h3>Pipes</h3>
+                <p>PVC & Fittings</p>
+            </div>
+
+            <div class="category" onclick="filterCategory('Hardware')">
+                <div class="category-icon">🔩</div>
+                <h3>Hardware</h3>
+                <p>Tools & Accessories</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section id="products">
+
+        <h2>Featured Products</h2>
+
+        <div id="product-list" class="products">
+
+            <!-- Products added using JavaScript -->
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About Build Bazaar</h2>
+
+        <p>
+            Build Bazaar is an online platform for purchasing
+            high-quality construction and building materials.
+            We make it easy for customers to find and purchase
+            materials required for their construction projects.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: support@buildbazaar.com</p>
+        <p>Phone: +91 90431 79208</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>BUILD BAZAAR</h3>
+
+        <p>
+            Your trusted construction material marketplace.
+        </p>
+
+        <p>© 2026 Build Bazaar. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <!-- Cart Popup -->
+    <div id="cart-box" class="cart-box">
+
+        <h2>Your Cart</h2>
+
+        <div id="cart-items"></div>
+
+        <h3>
+            Total: ₹<span id="cart-total">0</span>
+        </h3>
+
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="closeCart()">Close</button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
